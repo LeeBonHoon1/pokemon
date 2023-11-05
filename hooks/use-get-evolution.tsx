@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import PokemonAPIs from "@/common/apis";
 
-const useGetEvolution = (id: number) => {
+const useGetEvolution = (id: string) => {
   const { data, isLoading, error } = useQuery(
     ["pokemon-evol", id],
     () => PokemonAPIs.getEvolution(id),

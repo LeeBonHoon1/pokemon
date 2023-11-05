@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 import { PokemonDetailInfo } from "@/types";
+import { convertBorderColor } from "@/utils";
 
 interface PokemonCardProps {
   pokemon: PokemonDetailInfo;
@@ -14,10 +16,15 @@ const PokemonCard = ({ pokemon }: PokemonCardProps) => {
     return item.language.name === "ko";
   });
 
+  const borderColor = convertBorderColor(pokemon.color.name);
+
   return (
     <Link href={`/detail/${pokemon.name}`}>
       <div
-        className="flex flex-col items-center space-y-3 p-3 border rounded-2xl"
+        style={{ borderColor: borderColor }}
+        className={cn(
+          "flex flex-col items-center space-y-3 p-3 border rounded-2xl"
+        )}
         key={pokemon.name}
       >
         <div className="text-[20px]">{koName[0].name}</div>

@@ -1,4 +1,3 @@
-import { Sprites } from './../types/index';
 import axios from 'axios'
 import { BASE_URL } from './constants'
 import { PokemonDetailInfo, Pokemons } from '@/types'
@@ -37,10 +36,21 @@ const getKoInfoPokemon = async (url: string) => {
   return res.data
 }
 
-const getEvolution = async (id: number) => {
+const getEvolution = async (id: string) => {
   const res = await axios.get<Evolution>(`${BASE_URL}/evolution-chain/${id}`)
   return res.data
 }
+
+const getEvolImage = async (array: string[]) => {
+  const promises = array.map(async (item) => {
+    const res = await axios.get(`${BASE_URL}/pokemon/${item}`);
+    return res.data;
+  });
+
+  const results = await Promise.all(promises);
+  return results;
+}
+
 
 const PokemonAPIs = {
   getPokemon,
@@ -48,6 +58,7 @@ const PokemonAPIs = {
   getPokemonDetail,
   getKoInfoPokemon,
   getEvolution,
+  getEvolImage
 }
 
 export default PokemonAPIs

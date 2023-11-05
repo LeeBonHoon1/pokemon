@@ -33,6 +33,7 @@ export interface PokemonDetailInfo {
   is_default: boolean
   location_area_encounters: string
   moves: Mfe[]
+  color: Color
   past_abilities: any[]
   past_types: any[]
   species: Species
@@ -40,6 +41,11 @@ export interface PokemonDetailInfo {
   stats: Stat[]
   types: Type[]
   weight: number
+}
+
+export interface Color {
+  name: string
+  url: string
 }
 
 export interface Name {

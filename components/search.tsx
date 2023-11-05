@@ -38,6 +38,7 @@ const Search = () => {
       />
       <Button
         variant={"outline"}
+        disabled={!id}
         onClick={() => {
           searchDetailRouter(id);
         }}

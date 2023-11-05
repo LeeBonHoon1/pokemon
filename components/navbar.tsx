@@ -12,7 +12,7 @@ const Navbar = () => {
         </Link>
         <div className="flex items-center justify-center space-x-3">
           <Search />
-          <ModeToggle />
+          {/* <ModeToggle /> */}
         </div>
       </div>
     </nav>
