@@ -1,4 +1,4 @@
-import { Chain, EvolvesTo } from "@/types/evolution";
+import { Chain } from "@/types/evolution";
 
 export const convertBorderColor = (color: string) => {
   const colorMap: { [key: string]: string } = {

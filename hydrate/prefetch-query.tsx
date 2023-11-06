@@ -1,7 +1,8 @@
+import { PropsWithChildren } from "react";
+import { Hydrate, dehydrate } from "@tanstack/react-query";
+
 import getHydrateQueryClient from "@/hydrate/get-hydrate-query-client";
 import PokemonAPIs from "@/common/apis";
-import { Hydrate, dehydrate } from "@tanstack/react-query";
-import { PropsWithChildren } from "react";
 
 export const PrefetchQuery = async ({ children }: PropsWithChildren) => {
   const queryClient = getHydrateQueryClient();

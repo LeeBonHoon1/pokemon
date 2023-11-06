@@ -1,5 +1,5 @@
-import PokemonList from "@/components/pokemon-list";
 import { PrefetchQuery } from "@/hydrate/prefetch-query";
+import PokemonList from "@/components/pokemon-list";
 
 export default function Home() {
   return (

@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
 import { PokemonDetailInfo } from "@/types";
 import { convertBorderColor } from "@/utils";
+import { cn } from "@/lib/utils";
 
 interface PokemonCardProps {
   pokemon: PokemonDetailInfo;

@@ -46,7 +46,7 @@ const PokemonList = () => {
         });
       })}
       {isFetching &&
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: 10 }).map((_, index) => (
           <SkeletonCard key={index} />
         ))}
       <div ref={ref} />

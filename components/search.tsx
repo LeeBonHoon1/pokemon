@@ -3,8 +3,8 @@
 import { ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { searchStore } from "@/store/search";
-import { useToast } from "@/components/ui/use-toast";
 
+import { useToast } from "@/components/ui/use-toast";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 

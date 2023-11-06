@@ -68,7 +68,7 @@ const PokemonDetailPage = () => {
 
   return (
     <div className="pt-20 w-[80%] m-auto">
-      <div className="space-y-5 flex flex-col md:flex-row justify-evenly mt-10">
+      <div className="space-y-5 flex flex-col md:flex-row justify-evenly bg-transparent">
         <div className="space-y-9">
           <h1 className="text-5xl font-bold">{name?.[0].name}</h1>
           <Image
@@ -104,8 +104,8 @@ const PokemonDetailPage = () => {
         </div>
         <div className="flex flex-col justify-center space-y-2">
           <div className="text-3xl">포켓몬 소개</div>
-          {introduction?.map((intro, index) => (
-            <div key={index} className="text-lg">
+          {introduction?.map((intro) => (
+            <div key={intro.language.name} className="text-lg">
               {intro.flavor_text}
             </div>
           ))}
