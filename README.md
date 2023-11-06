@@ -49,3 +49,13 @@ bun dev
   use-query의 isLoading, isFetching, error의 값에 따라 로딩페이지, 스켈레톤 error 페이지 구현
 
 - 포켓몬의 속성과 같은 border 적용
+
+## 사용한 기술스택
+
+- next13
+- typescript
+- react-query@4 version
+- shadcn-ui
+- tailwind css
+- zustand
+- lucide-react
