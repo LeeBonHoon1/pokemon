@@ -29,7 +29,7 @@ bun dev
 - types : api콜을 통해 받아오는 데이터의 type들을 관리
 - utils : util함수 관리
 
-## 한글 번역을 위한 로직 구현 설명
+## 로직 구현 설명
 
 - pokemon API에서 BASE_URL/pokemon 으로 호출하면 url과 name을 응답값으로 주는데
   url에 포함된 id 값으로 BASE_URL/pokemon-species api를 호출해야 번역 가능한 데이터를 받을 수 있음
@@ -42,7 +42,7 @@ bun dev
 - useQuery와 useInfiniteQuery 데이터 캐싱
   각 각의 api 요청은 queryKey로 캐싱 후 불필요한 재요청 최적화
 - hydrate
-  서버 컴포넌트에서 dehydrate된 prefetch 하고 데이터를 query-client에 캐싱 후
+  서버 컴포넌트에서 dehydrate된 데이터를 prefetch 하고 데이터를 query-client에 캐싱 후
   클라이언트 컴포넌트에서 같인 queryKey로 캐싱 된 데이터 사용 (SSR 최적화)
 
 - data fetching과 loading, error 발생 시 사용자 경험 고려
