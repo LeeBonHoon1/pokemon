@@ -19,7 +19,7 @@ const PokemonList = () => {
   const { inView, ref } = useInView();
 
   useEffect(() => {
-    if (inView) {
+    if (inView && hasNextPage) {
       fetchNextPage();
     }
   }, [fetchNextPage, hasNextPage, inView]);
