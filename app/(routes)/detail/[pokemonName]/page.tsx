@@ -84,8 +84,8 @@ const PokemonDetailPage = () => {
               ? Array.from({ length: 3 }).map((_, index) => (
                   <EvolImageSkeleton key={index} />
                 ))
-              : evolImageData?.map((item) => (
-                  <Link href={`/detail/${item.name}`} key={item.name}>
+              : evolImageData?.map((item, index) => (
+                  <Link href={`/detail/${item.name}`} key={index}>
                     <div
                       className="border rounded-2xl"
                       style={{ borderColor: borderColor }}
@@ -104,8 +104,8 @@ const PokemonDetailPage = () => {
         </div>
         <div className="flex flex-col justify-center space-y-2">
           <div className="text-3xl">포켓몬 소개</div>
-          {introduction?.map((intro) => (
-            <div key={intro.language.name} className="text-lg">
+          {introduction?.map((intro, index) => (
+            <div key={`${intro.flavor_text}${index}`} className="text-lg">
               {intro.flavor_text}
             </div>
           ))}
